@@ -3,6 +3,7 @@ import subprocess, time, signal, sys
 from pathlib import Path
 sim, kind, app = sys.argv[1:]
 root = Path(__file__).resolve().parents[1] / 'Demo'
+video_root = Path(__file__).resolve().parents[1] / 'Submission' / 'Medium'
 def run(*args):
     return subprocess.run(['xcrun', 'simctl', *args], check=True, capture_output=True, text=True)
 def stop():
@@ -36,7 +37,7 @@ def wait_phase(expected):
     raise RuntimeError('Demo did not reach ' + expected)
 wait_phase('ready')
 time.sleep(2)
-video = subprocess.Popen(['xcrun', 'simctl', 'io', sim, 'recordVideo', '--codec=h264', '--force', str(root/f'TeaAtelier-{kind}-demo.mp4')], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+video = subprocess.Popen(['xcrun', 'simctl', 'io', sim, 'recordVideo', '--codec=h264', '--force', str(video_root/f'TeaAtelier-{kind}-demo.mp4')], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 time.sleep(2)
 (container/'demo-go').write_text('start')
 wait_phase('confirmation'); time.sleep(1); shot('confirmation')

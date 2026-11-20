@@ -38,7 +38,8 @@ SwiftUI 作業 #233：結合各種輸入元件 & 顯示 alert 的 App。
 - `Views/TeaCupView.swift`：SwiftUI Shape 茶杯、配料與杯標預覽。
 - `Verification`：價格與驗證檢查、圖示產生器、示範錄製腳本。
 - `Submission/Medium`：文章草稿與發布說明。
-- `Demo`：模擬器截圖與影片。
+- `Demo/images`：模擬器截圖。
+- Demo 影片供 Medium 文章使用，僅保留於本機 `Submission/Medium`，不納入 Git 追蹤。
 
 ## 驗證
 
@@ -55,6 +56,4 @@ SwiftUI 作業 #233：結合各種輸入元件 & 顯示 alert 的 App。
 ![iPhone 取餐](Demo/images/iPhone-schedule.png)
 ![iPad 雙欄](Demo/images/iPad-home.png)
 
-- [iPhone 示範影片](Demo/TeaAtelier-iPhone-demo.mp4)
-- [iPad 示範影片](Demo/TeaAtelier-iPad-demo.mp4)
 - [Medium 文章預覽](Submission/Medium/Medium文章預覽.html)

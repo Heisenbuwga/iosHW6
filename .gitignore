@@ -2,3 +2,6 @@
 xcuserdata/
 *.xcuserstate
 DerivedData/
+
+# Demo videos are local Medium publishing assets
+*.mp4
